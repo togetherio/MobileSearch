@@ -9,7 +9,7 @@
 		var number = $("#num").val();
 		$.ajax({
 			type : "post",
-			url : "getInfo",
+			url : "getInfo.do",
 			dataType : "json",
 			data:{mobilenumber:number},
 			success : function(result) {

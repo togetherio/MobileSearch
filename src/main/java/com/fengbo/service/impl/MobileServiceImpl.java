@@ -16,6 +16,9 @@ public class MobileServiceImpl implements MobileService {
 
 	@Override
 	public Mobile getInfo(String mobilenumber) {
+		if(mobilenumber.length() > 7) {
+			mobilenumber = mobilenumber.substring(0, 7);
+		}
 		Mobile mobile = mobilemapper.getInfo(mobilenumber);
 		return mobile;
 	}
